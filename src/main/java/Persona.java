@@ -1,5 +1,7 @@
+import lombok.Data;
 import java.util.Optional;
 
+@Data
 public class Persona {
 
     public String nombre;
@@ -35,26 +37,7 @@ public class Persona {
         this.setEdad(optEdad.get());
     }
 
-    //Getters
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getPoblacion() {
-        return poblacion;
-    }
-
-    public String getEdad(){
-        return edad;
-    }
-
-    public int getEdadInt(){
-        return Integer.valueOf(edad);
-    }
-
     //Setters
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -63,8 +46,21 @@ public class Persona {
         this.poblacion = poblacion;
     }
 
-    public void  setEdad(String edad){
+    public void setEdad(String edad) {
         this.edad = edad;
+    }
+
+    //Getters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getPoblacion() {
+        return poblacion;
+    }
+
+    public int getEdadInt(){
+        return Integer.valueOf(edad);
     }
 
     public String toString() {
